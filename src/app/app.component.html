@@ -2,27 +2,9 @@
   <div class="container">
     <div class="navbar-brand">
       <a routerLink="/flights" class="navbar-item">Flights</a>
-      <a routerLink="/route-one" class="navbar-item">Route One</a>
-      <a routerLink="/route-two" class="navbar-item">Route Two</a>
-      <a routerLink="/route-three" class="navbar-item">Route Three</a>
     </div>
   </div>
 </nav>
-<nav class="navbar" role="navigation" aria-label="main navigation" *ngIf="routeReport">
-  <div class="container">
-    <a [routerLink]="routeReport.previous" class="navbar-item">
-      <span>Previous: </span>
-      <b>{{ routeReport.previous }}</b>
-    </a>
-    <a [routerLink]="routeReport.current" class="navbar-item">
-      <span>Current: </span>
-      <b>{{ routeReport.current }}</b>
-    </a>
-  </div>
-</nav>
 <div class="container">
-  <pre>{{ routeReport | json }}</pre>
-
-
   <router-outlet></router-outlet>
 </div>
