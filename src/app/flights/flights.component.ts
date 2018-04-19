@@ -22,15 +22,13 @@ export class FlightsComponent implements OnInit {
     this.createForm();
 
     const fromAirport$ = this.flightsForm.controls.fromAirport.valueChanges;
-    const toAirport$ = this.flightsForm.controls.toAirport.valueChanges;
-    const departureDate$ = this.flightsForm.controls.departureDate.valueChanges;
-    const returnDate$ = this.flightsForm.controls.returnDate.valueChanges;
+    // TODO: setup references to value changes for all form fields
 
     fromAirport$
-      .pipe(
-        combineLatest(toAirport$, departureDate$, returnDate$),
-        debounceTime(300)
-      )
+      .pipe
+      // TODO: combine the latest values from all form fields
+      // to trigger the async validator
+      ()
       .subscribe(([fromAirport, toAirport, departureDate, returnDate]) => {
         const validator = this.validateAiport({
           fromAirport,
