@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.router.events.pipe(reportRouteChanges()).subscribe(report => {
-      this.routeReport = report;
-    });
+    // TODO: Use reportRouteChanges operator to get
+    // route changes
+    this.router.events.pipe(...);
   }
 }
