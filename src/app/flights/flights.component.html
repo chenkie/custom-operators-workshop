@@ -1,0 +1,47 @@
+<div class="columns is-centered">
+  <div class="column is-8">
+    <div class="card">
+      <div class="card-content">
+        <div class="field">
+          <h2 class="subtitle">Welcome to BadUXAir!</h2>
+          <p>These are the airports we fly in and out of: SFO, LAX, SLC, SEA, DEN, LGA, ORD</p>
+        </div>
+        <form [formGroup]="flightsForm" (ngSubmit)="onSubmit()">
+          <div class="columns">
+            <div class="column is-3">
+              <div class="field">
+                <input type="text" class="input" placeholder="Departure Airport" formControlName="fromAirport">
+              </div>
+            </div>
+            <div class="column is-3">
+              <div class="field">
+                <input type="text" class="input" placeholder="Arrival Airport" formControlName="toAirport">
+              </div>
+            </div>
+            <div class="column is-3">
+              <div class="field">
+                <input type="date" class="input" placeholder="Arrival Airport" formControlName="departureDate">
+              </div>
+            </div>
+            <div class="column is-3">
+              <div class="field">
+                <input type="date" class="input" placeholder="Arrival Airport" formControlName="returnDate">
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-full">
+              <button type="submit" class="button is-primary" [disabled]="!flightsForm.valid">Book Flight!</button>
+            </div>
+          </div>
+
+          <span *ngIf="isFetching">Validating flight...</span>
+
+          <span class="has-text-danger" *ngIf="flightsForm.get('fromAirport').errors && flightsForm.get('fromAirport').errors.invalidFlightMessage">
+            {{ flightsForm.get('fromAirport').errors.invalidFlightMessage }}
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

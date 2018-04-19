@@ -1,27 +1,52 @@
-# CustomOperatorsWorkshop
+# ng-conf 2018 Custom Operators Workshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
+## Getting Started
 
-## Development server
+Clone the repo and install the dependencies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+git clone https://github.com/chenkie/custom-operators-workshop
 
-## Code scaffolding
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Once the dependencies are installed, you can run the application using the Angular CLI
 
-## Build
+```bash
+ng serve
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# OR
 
-## Running unit tests
+npm start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Exercise Branches
 
-## Running end-to-end tests
+There are three exercises for this workshop and each has its own "start" and "finish" branch. The code in each exercise's **start** branch needs to be completed for the app to run. The completed code is provided in the **finish** branch.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+The **master** branch has the completed code for all three exercises.
 
-## Further help
+**Exercise 1 - Custom Filter Operator**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+Start branch: git checkout ex-1-start
+Finish branch: git checkout ex-1-finish
+```
+
+**Exercise 2 - Combining the Latest Values**
+
+```
+Start branch: git checkout ex-2-start
+Finish branch: git checkout ex-2-finish
+```
+
+**Exercise 3 - Custom Route Change Reporter**
+
+```
+Start branch: git checkout ex-3-start
+Finish branch: git checkout ex-3-finish
+```
+
+## License
+
+MIT
